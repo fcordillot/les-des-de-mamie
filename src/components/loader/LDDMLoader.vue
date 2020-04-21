@@ -74,11 +74,12 @@
     transition: opacity 1s $ease-out-quint, visibility 1s;
     will-change: opacity, visibility;
 
-    &.is-active {
-      opacity: 1;
-      visibility: visible;
-    }
+    // &.is-active {
+    //   opacity: 1;
+    //   visibility: visible;
+    // }
 
+    &.is-active,
     &.is-hidden {
       opacity: 0;
       visibility: hidden;

@@ -44,13 +44,13 @@ export default {
         { p: 'og:title', c: `${this.page.meta.title} - ${process.env.VUE_APP_SITE_NAME}` },
         { p: 'og:site_name', c: decode(this.page.meta.title) },
         { p: 'og:description', c: decode(this.page.meta.description) },
-        { p: 'og:image', c: `${process.env.VUE_APP_URL}${this.allImages['seo/les-d-es-de-mamie_1200x630'].bind.src}` },
+        { p: 'og:image', c: `${process.env.VUE_APP_URL}${this.allImages['seo/les-des-de-mamie_1200x630'].bind.src}` },
         { p: 'og:image:alt', c: decode(this.page.meta.title) },
         { p: 'og:url', c: process.env.VUE_APP_URL },
         // Twitter
         { p: 'twitter:title', c: `${this.page.meta.title} - ${process.env.VUE_APP_SITE_NAME}` },
         { p: 'twitter:description', c: decode(this.page.meta.description) },
-        { p: 'twitter:image', c: `${process.env.VUE_APP_URL}${this.allImages['seo/les-d-es-de-mamie_900x450'].bind.src}` },
+        { p: 'twitter:image', c: `${process.env.VUE_APP_URL}${this.allImages['seo/les-des-de-mamie_900x450'].bind.src}` },
         // Favicon
         { p: 'msapplication-TileColor', c: '#ffffff' },
         { p: 'msapplication-TileImage', c: this.allImages['seo/ms-icon-144x144'].bind.src },
