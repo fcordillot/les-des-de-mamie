@@ -1,7 +1,6 @@
 const path = require('path')
 
 const colors = require('colors/safe')
-const CopyPlugin = require('copy-webpack-plugin')
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin')
 const ImageminPlugin = require('imagemin-webpack-plugin').default
@@ -142,16 +141,6 @@ const purgeCSSPlugin = new PurgeCSSPlugin({
   ]
 })
 
-const copyPluging = new CopyPlugin([{
-  from: 'static/',
-  to: 'static/'
-}])
-
-const copyAPIPluging = new CopyPlugin([{
-  from: './api/',
-  to: './api/'
-}])
-
 module.exports = {
   publicPath: process.env.BASE_URL,
   crossorigin: 'use-credentials',
@@ -179,8 +168,6 @@ module.exports = {
       const config = {
         ...baseConfig,
         plugins: [
-          copyPluging,
-          copyAPIPluging,
           svgPlugin,
           imageminPlugin,
           purgeCSSPlugin
@@ -194,8 +181,6 @@ module.exports = {
     } else {
       return {
         plugins: [
-          copyPluging,
-          copyAPIPluging,
           svgPlugin,
           imageminPlugin
         ]
